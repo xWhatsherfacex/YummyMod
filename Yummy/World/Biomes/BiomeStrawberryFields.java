@@ -17,7 +17,6 @@ public class BiomeStrawberryFields extends BiomeGenBase{
 	this.waterColorMultiplier = 3660528;
 
 	
-	
 	}
 
 	@Override
