@@ -30,6 +30,7 @@ public class DeadSheepBlock extends Block {
 		  super(material.cloth);
 		  this.setBlockName("DeadSheep");
 		  this.setCreativeTab(Yummy.tabYummy); 
+		  this.setHarvestLevel("sword", 0);
 	  }
 
 	  public IIcon getIcon(int side, int meta) {

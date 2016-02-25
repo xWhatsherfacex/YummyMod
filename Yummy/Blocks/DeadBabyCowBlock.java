@@ -18,6 +18,8 @@ public class DeadBabyCowBlock extends Block{
 		this.setCreativeTab(Yummy.tabYummy);
 		this.setBlockName("DeadBabyCowBlock");
 		this.setBlockTextureName(Yummy.MODID+ ":" + "DeadCowBlock");
+		this.setHarvestLevel("sword", 0);
+		
 	}
 	
 	@Override

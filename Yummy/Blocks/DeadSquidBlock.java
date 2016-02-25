@@ -12,7 +12,7 @@ public class DeadSquidBlock extends Block{
 		this.setCreativeTab(Yummy.tabYummy);
 		this.setBlockName("DeadSquidBlock");
 		this.setBlockTextureName(Yummy.MODID+ ":" + "DeadSquidBlock");
-		
+		this.setHarvestLevel("sword", 0);
 	}
 
 }

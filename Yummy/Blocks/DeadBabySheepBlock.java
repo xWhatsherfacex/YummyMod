@@ -30,6 +30,7 @@ public class DeadBabySheepBlock extends Block {
 		  super(material.cloth);
 		  this.setBlockName("DeadBabySheep");
 		  this.setCreativeTab(Yummy.tabYummy); 
+		  this.setHarvestLevel("sword", 0);
 	  }
 
 	  public IIcon getIcon(int side, int meta) {
@@ -37,26 +38,26 @@ public class DeadBabySheepBlock extends Block {
 			  meta = 0;
 		  return this.icons[meta];
 
-}
+	  }
 
-@SideOnly(Side.CLIENT)
-public void registerBlockIcons (IIconRegister iconRegister)
-{
-    this.icons = new IIcon[names.length];
+	  @SideOnly(Side.CLIENT)
+	  public void registerBlockIcons (IIconRegister iconRegister)
+	  {
+		  this.icons = new IIcon[names.length];
 
-    for (int i = 0; i < this.icons.length; ++i)
-    {
-        this.icons[i] = iconRegister.registerIcon("Yummy:" + "deadsheep" + names[i]);
-    }
-}
+		  for (int i = 0; i < this.icons.length; ++i)
+		  {
+			  this.icons[i] = iconRegister.registerIcon("Yummy:" + "deadsheep" + names[i]);
+		  }
+	  }
 
-public int damageDropped(int meta) {
-return meta;
-}
+		public int damageDropped(int meta) {
+			return meta;
+		}
 
-public void getSubBlocks(Item item, CreativeTabs tab, List list) {
-for (int i = 0; i < 16; i ++) {
-list.add(new ItemStack(item, 1, i));
-}
-} 
+		public void getSubBlocks(Item item, CreativeTabs tab, List list) {
+			for (int i = 0; i < 16; i ++) {
+				list.add(new ItemStack(item, 1, i));
+			}
+		} 
 }
