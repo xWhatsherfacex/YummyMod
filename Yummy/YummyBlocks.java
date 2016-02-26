@@ -88,7 +88,7 @@ public class YummyBlocks {
 
     public static void init(){
 
-       //Animals
+    	//Animals
     	GameRegistry.registerBlock(DeadSheepBlock, ItemDeadSheepBlocks.class, DeadSheepBlock.getUnlocalizedName().substring(5));
     	GameRegistry.registerBlock(DeadBabySheepBlock, ItemDeadBabySheepBlocks.class, DeadBabySheepBlock.getUnlocalizedName().substring(5));
     	GameRegistry.registerBlock(DeadCowBlock, "DeadCowBlock");
