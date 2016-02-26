@@ -1,8 +1,7 @@
 ## YummyMod
 
 Development of the Yummy! Minecraft Mod. &lt;3  
-To Do:  
-Strawberry Fields Biome, Two Block High Corn Crop, DeadAnimal Models
+Yummy! Aims to be a realistic and challenging overhaul to the minecraft food and cooking system, with the widest range of new and exciting foods.
 
 At the top of the file there should be a short introduction and/ or overview that explains **what** the project is. This description should match descriptions added for package managers (Gemspec, package.json, etc.)
 
