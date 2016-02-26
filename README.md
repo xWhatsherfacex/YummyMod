@@ -18,7 +18,7 @@ A short description of the motivation behind the creation and maintenance of the
 
 ## Contributors
 
-xWhatsherfacex: Idea and Project Creator; Developer; Contributor; Author
+xWhatsherfacex: Idea and Project Creator; Developer; Contributor; Author  
 abob78: Developer; Contributor
 
 ## License
