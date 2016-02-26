@@ -37,6 +37,8 @@ public class Yummy {
 		proxy.preInit(e);
     	proxy.registerRenderThings();
     	BiomesYummy.init();
+    	YummyBlocks.init();
+    	YummyItems.init();
 	}
 	@EventHandler
 	public void init(FMLInitializationEvent e) {
