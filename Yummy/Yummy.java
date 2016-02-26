@@ -27,30 +27,29 @@ public class Yummy {
 	public static final String MODNAME ="Yummy!";
 	public static final String VERSION = "1.0";
 	
-@SidedProxy(clientSide="com.rnh.Yummy.Proxy.ClientProxy", serverSide="com.rnh.Yummy.Proxy.CommonProxy")
+	@SidedProxy(clientSide="com.rnh.Yummy.Proxy.ClientProxy", serverSide="com.rnh.Yummy.Proxy.CommonProxy")
 	public static CommonProxy proxy;	
 
-public static CreativeTabs tabYummy	= new CreativeTabsYummy("Yummy");
+	public static CreativeTabs tabYummy	= new CreativeTabsYummy("Yummy");
 
-@EventHandler
-public void preInit(FMLPreInitializationEvent e) {
-    proxy.preInit(e);
-    proxy.registerRenderThings();
-    BiomesYummy.init();
-}
-@EventHandler
-public void init(FMLInitializationEvent e) {
-    proxy.init(e);
-    MinecraftForge.EVENT_BUS.register(new YummyPigDropHandler());
-    MinecraftForge.EVENT_BUS.register(new YummyCowDropHandler());
-    MinecraftForge.EVENT_BUS.register(new YummyChickenDropHandler());
-    MinecraftForge.EVENT_BUS.register(new YummySheepDropHandler());
-    MinecraftForge.EVENT_BUS.register(new YummySquidDropHandler());
+	@EventHandler
+	public void preInit(FMLPreInitializationEvent e) {
+		proxy.preInit(e);
+    	proxy.registerRenderThings();
+    	BiomesYummy.init();
+	}
+	@EventHandler
+	public void init(FMLInitializationEvent e) {
+    	proxy.init(e);
+    	MinecraftForge.EVENT_BUS.register(new YummyPigDropHandler());
+    	MinecraftForge.EVENT_BUS.register(new YummyCowDropHandler());
+    	MinecraftForge.EVENT_BUS.register(new YummyChickenDropHandler());
+    	MinecraftForge.EVENT_BUS.register(new YummySheepDropHandler());
+    	MinecraftForge.EVENT_BUS.register(new YummySquidDropHandler());
+	}
 
-}
-
-@EventHandler
-public void postInit(FMLPostInitializationEvent e) {
-    proxy.postInit(e);
-}
+	@EventHandler
+	public void postInit(FMLPostInitializationEvent e) {
+    	proxy.postInit(e);
+	}
 }
