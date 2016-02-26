@@ -1,6 +1,7 @@
 package com.rnh.Yummy;
 
 import com.rnh.Yummy.CreativeTabs.CreativeTabsYummy;
+import com.rnh.Yummy.Recipes.YummyRecipies;
 import com.rnh.Yummy.DropHandler.YummyChickenDropHandler;
 import com.rnh.Yummy.DropHandler.YummyCowDropHandler;
 import com.rnh.Yummy.DropHandler.YummyPigDropHandler;
@@ -48,6 +49,7 @@ public class Yummy {
     	MinecraftForge.EVENT_BUS.register(new YummyChickenDropHandler());
     	MinecraftForge.EVENT_BUS.register(new YummySheepDropHandler());
     	MinecraftForge.EVENT_BUS.register(new YummySquidDropHandler());
+    	YummyRecipies.init();
 	}
 
 	@EventHandler
