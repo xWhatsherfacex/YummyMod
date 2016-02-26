@@ -1,4 +1,4 @@
-package com.rnh.Yummy;
+package com.rnh.Yummy.Blocks;
 
 import com.rnh.Yummy.Blocks.Churn;
 import com.rnh.Yummy.Blocks.PepperoniPizzaBlock;
