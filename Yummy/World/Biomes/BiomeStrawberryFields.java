@@ -29,6 +29,19 @@ public class BiomeStrawberryFields extends BiomeGenBase{
 		return 7397529;
 	}
 
+	@Override
+	public void decorate(World world, Random rand, int chunkX, int chunkZ)
+	{
+		super.decorate(world, rand, chunkX, chunkZ);
+		WorldGenerator strawberryBushGen = new YummyWorldGeneratorStrawberryBushes(topBlock);
+		
+		for (int l = 0; l < 64; ++l)
+		{
+			
+            strawberryBushGen.generate(world, rand, tempX, tempY, tempZ);
+
+		}
+	}
 	
 	
 }
