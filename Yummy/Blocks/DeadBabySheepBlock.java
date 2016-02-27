@@ -60,4 +60,6 @@ public class DeadBabySheepBlock extends Block {
 				list.add(new ItemStack(item, 1, i));
 			}
 		} 
+		
+	//Add drops according to color. ie. Red = red wool bones lamb etc
 }
