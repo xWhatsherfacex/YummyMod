@@ -1,5 +1,6 @@
 ## YummyMod
-Yummy! Aims to be a realistic and challenging overhaul to the minecraft food and cooking system, with the widest range of new and exciting foods.
+Yummy! Aims to be a realistic and challenging overhaul to the minecraft food and cooking system, with the widest range of new and exciting foods. Craft your favorite meal from scratch and don't forget to clean those dirty dishes!
+
 
 At the top of the file there should be a short introduction and/ or overview that explains **what** the project is. This description should match descriptions added for package managers (Gemspec, package.json, etc.)
 
