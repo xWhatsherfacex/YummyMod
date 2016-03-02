@@ -14,7 +14,6 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 
 public class YummyBlocks {
-
 	//Cake
 	public static Block CarrotCakeBlock = new com.rnh.Yummy.Blocks.CarrotCakeBlock("CarrotCakeBlock", Material.cake);
 	public static Block GoldenCarrotCakeBlock = new com.rnh.Yummy.Blocks.GoldenCarrotCakeBlock("GoldenCarrotCakeBlock", Material.cake);
@@ -54,7 +53,6 @@ public class YummyBlocks {
    
 	//Logs
 	public static Block YummyLogs = new com.rnh.Yummy.Blocks.YummyLogs().setBlockName("YummyLogs").setCreativeTab(Yummy.tabYummy);
-
 	public static Block Churn = new com.rnh.Yummy.Blocks.Churn(Material.wood);
    
 	//Fruit
@@ -75,7 +73,7 @@ public class YummyBlocks {
 	public static Block PepperoniPizzaBlock = new PepperoniPizzaBlock(null, null);
 	public static Block SausagePizzaBlock = new com.rnh.Yummy.Blocks.SausagePizzaBlock(null, null);
     
-	
+    //Dead Block
 	public static Block DeadSheepBlock = new com.rnh.Yummy.Blocks.DeadSheepBlock(null, null);
 	public static Block DeadBabySheepBlock = new com.rnh.Yummy.Blocks.DeadBabySheepBlock(null, null);
 	public static Block DeadCowBlock = new com.rnh.Yummy.Blocks.DeadCowBlock(null);
@@ -87,9 +85,8 @@ public class YummyBlocks {
 	public static Block DeadSquidBlock = new com.rnh.Yummy.Blocks.DeadSquidBlock(null);
 
     public static void init(){
-
     	//Animals
-    	GameRegistry.registerBlock(DeadSheepBlock, ItemDeadSheepBlocks.class, DeadSheepBlock.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(DeadSheepBlock, ItemDeadSheepBlocks.class, DeadSheepBlock.getUnlocalizedName().substring(5));
     	GameRegistry.registerBlock(DeadBabySheepBlock, ItemDeadBabySheepBlocks.class, DeadBabySheepBlock.getUnlocalizedName().substring(5));
     	GameRegistry.registerBlock(DeadCowBlock, "DeadCowBlock");
     	GameRegistry.registerBlock(DeadBabyCowBlock, "DeadbabyCowBlock");
@@ -99,52 +96,47 @@ public class YummyBlocks {
     	GameRegistry.registerBlock(DeadBabyChickenBlock, "DeadBabyChickenBlock");
     	GameRegistry.registerBlock(DeadSquidBlock, "DeadSquidBlock");
 
-
-    	
-	   //Saplings
-       GameRegistry.registerBlock(AppleSapling, ItemAppleSaplingBlocks.class, AppleSapling.getUnlocalizedName().substring(5));
-	   GameRegistry.registerBlock(FruitSapling, ItemFruitSaplingBlocks.class, FruitSapling.getUnlocalizedName().substring(5));
-	   GameRegistry.registerBlock(TropicalSapling, ItemTropicalSaplingBlocks.class, TropicalSapling.getUnlocalizedName().substring(5));
+		//Saplings
+    	GameRegistry.registerBlock(AppleSapling, ItemAppleSaplingBlocks.class, AppleSapling.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(FruitSapling, ItemFruitSaplingBlocks.class, FruitSapling.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(TropicalSapling, ItemTropicalSaplingBlocks.class, TropicalSapling.getUnlocalizedName().substring(5));
 	   
-	   //Logs
-	   GameRegistry.registerBlock(YummyLogs, ItemBlockYummyLogs.class, YummyLogs.getUnlocalizedName().substring(5));
-
-	   GameRegistry.registerBlock(Churn, "Churn");
+	    //Logs
+	    GameRegistry.registerBlock(YummyLogs, ItemBlockYummyLogs.class, YummyLogs.getUnlocalizedName().substring(5));
+	    GameRegistry.registerBlock(Churn, "Churn");
 	
-	   //Leaves
-	   GameRegistry.registerBlock(AppleLeaves, "AppleLeaves");
-	   GameRegistry.registerBlock(YellowAppleLeaves, "YellowAppleLeaves");
-	   GameRegistry.registerBlock(GreenAppleLeaves, "GreenAppleLeaves");
-	   GameRegistry.registerBlock(GoldenAppleLeaves, "GoldenAppleLeaves");
-       GameRegistry.registerBlock(PalmLeaves, "PalmLeaves");
-	   GameRegistry.registerBlock(CherryLeaves, "CherryLeaves");
+	    //Leaves
+	    GameRegistry.registerBlock(AppleLeaves, "AppleLeaves");
+	    GameRegistry.registerBlock(YellowAppleLeaves, "YellowAppleLeaves");
+	    GameRegistry.registerBlock(GreenAppleLeaves, "GreenAppleLeaves");
+	    GameRegistry.registerBlock(GoldenAppleLeaves, "GoldenAppleLeaves");
+        GameRegistry.registerBlock(PalmLeaves, "PalmLeaves");
+	    GameRegistry.registerBlock(CherryLeaves, "CherryLeaves");
 
-	   //Plants
-	   GameRegistry.registerBlock(StrawberryBush, "StrawberryBush");
-	   GameRegistry.registerBlock(CornStalk, "CornStalk");
+	    //Plants
+	    GameRegistry.registerBlock(StrawberryBush, "StrawberryBush");
+	    GameRegistry.registerBlock(CornStalk, "CornStalk");
 
-
-	   //Cake
-	   GameRegistry.registerBlock(BananaBunch, "BananaBunch");
-	   GameRegistry.registerBlock(CoconutBlock, "CoconutBlock");
-	   GameRegistry.registerBlock(MangoBlock, "MangoBlock");
-	   GameRegistry.registerBlock(PapayaBlock, "PapayaBlock");
-	   GameRegistry.registerBlock(CarrotCakeBlock, "CarrotCakeBlock");
-	   GameRegistry.registerBlock(GoldenCarrotCakeBlock, "GoldenCarrotCakeBlock");
-	   GameRegistry.registerBlock(ChocolateCakeBlock, "ChocolateCakeBlock");
-	   GameRegistry.registerBlock(RedVelvetCakeBlock, "RedVelvetCakeBlock");
-	   GameRegistry.registerBlock(MarbleCakeBlock, "MarbleCakeBlock");
-	   GameRegistry.registerBlock(ApplePieBlock,"ApplePieBlock");
-	   GameRegistry.registerBlock(PumpkinPieBlock,"PumpkinPieBlock");
-	   GameRegistry.registerBlock(PlainCakeBlock, "PlainCakeBlock");		
-	   GameRegistry.registerBlock(CreeperCakeBlock, "CreeperCakeBlock");
-	   GameRegistry.registerBlock(RainbowCakeBlock, "RainBowCakeBLock");
-	   GameRegistry.registerBlock(BiPrideCakeBlock, "BiPrideCakeBlock");
-	   GameRegistry.registerBlock(TransPrideCakeBlock, "TransPrideCakeBlock");
-	   GameRegistry.registerBlock(BlackForrestCakeBlock, "BlackForrestCakeBlock");
-	   GameRegistry.registerBlock(CheesePizzaBlock, "CheesePizzaBlock");
-	   GameRegistry.registerBlock(PepperoniPizzaBlock, "PepperoniPizzaBlock");
-	   GameRegistry.registerBlock(SausagePizzaBlock, "SausagePizzaBlock");
-
+	    //Cake
+	    GameRegistry.registerBlock(BananaBunch, "BananaBunch");
+	    GameRegistry.registerBlock(CoconutBlock, "CoconutBlock");
+	    GameRegistry.registerBlock(MangoBlock, "MangoBlock");
+	    GameRegistry.registerBlock(PapayaBlock, "PapayaBlock");
+	    GameRegistry.registerBlock(CarrotCakeBlock, "CarrotCakeBlock");
+	    GameRegistry.registerBlock(GoldenCarrotCakeBlock, "GoldenCarrotCakeBlock");
+	    GameRegistry.registerBlock(ChocolateCakeBlock, "ChocolateCakeBlock");
+	    GameRegistry.registerBlock(RedVelvetCakeBlock, "RedVelvetCakeBlock");
+	    GameRegistry.registerBlock(MarbleCakeBlock, "MarbleCakeBlock");
+	    GameRegistry.registerBlock(ApplePieBlock,"ApplePieBlock");
+	    GameRegistry.registerBlock(PumpkinPieBlock,"PumpkinPieBlock");
+	    GameRegistry.registerBlock(PlainCakeBlock, "PlainCakeBlock");		
+	    GameRegistry.registerBlock(CreeperCakeBlock, "CreeperCakeBlock");
+	    GameRegistry.registerBlock(RainbowCakeBlock, "RainBowCakeBLock");
+	    GameRegistry.registerBlock(BiPrideCakeBlock, "BiPrideCakeBlock");
+	    GameRegistry.registerBlock(TransPrideCakeBlock, "TransPrideCakeBlock");
+	    GameRegistry.registerBlock(BlackForrestCakeBlock, "BlackForrestCakeBlock");
+	    GameRegistry.registerBlock(CheesePizzaBlock, "CheesePizzaBlock");
+	    GameRegistry.registerBlock(PepperoniPizzaBlock, "PepperoniPizzaBlock");
+	    GameRegistry.registerBlock(SausagePizzaBlock, "SausagePizzaBlock");
 	}
 }
