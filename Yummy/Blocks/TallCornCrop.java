@@ -1,5 +1,8 @@
 package com.rhn.YummyMod.Blocks;
 
+
+import com.rnh.Yummy.YummyItems;
+
 import java.util.Random;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.Block;
