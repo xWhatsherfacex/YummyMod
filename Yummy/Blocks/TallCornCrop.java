@@ -1,4 +1,4 @@
-package com.rhn.YummyMod.Blocks;
+package com.rnh.Yummy.Blocks;
 
 
 import com.rnh.Yummy.YummyItems;
@@ -70,22 +70,19 @@ public class TallCornCrop extends Block {
                (soil != null && soil.canSustainPlant(world, x, y - 1, z, ForgeDirection.UP, YummyItems.CornSeeds.));
     }
 
-    @Override
-    public int idDropped (int metadata, Random random, int par2) {
+    public ItemStack idDropped (int metadata, Random random, int par2) {
         switch (metadata) {
         case 0:
-            return YummyItems.CornSeeds.itemID;
+            return new ItemStack(YummyItems.CornSeeds,1);
         case 1:
-            return YummyItems.Corn.itemID;
+            return new ItemStack(YummyItems.Corn,3);
         default:
             // Error case!
-            return -1; // air
+            return new ItemStack(Blocks.air);
         }
     }
 
     //when crop is 
-    @Override
-    public int idPicked (World world, int x, int y, int z) {
-        return com.rhn.YummyItems.CornSeeds.itemID;
+   public ItemStack idPicked (World world, int x, int y, int z) {
+        return new ItemStack(YummyItems.CornSeeds);
     }
-}
