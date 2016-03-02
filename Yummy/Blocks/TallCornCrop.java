@@ -5,7 +5,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.block.Block;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.world.World;
-import net.minecraftforge.common.ForgeDirection;
+import net.minecraftforge.common.util.ForgeDirection;
 
 public class TallCornCrop extends Block {
 
@@ -64,16 +64,16 @@ public class TallCornCrop extends Block {
     public boolean canBlockStay (World world, int x, int y, int z) {
         Block soil = blocksList[world.getBlockId(x, y - 1, z)];
         return (world.getFullBlockLightValue(x, y, z) >= 8 || world .canBlockSeeTheSky(x, y, z)) && 
-               (soil != null && soil.canSustainPlant(world, x, y - 1, z, ForgeDirection.UP, com.rhn.YummyMod.Items.CornSeed));
+               (soil != null && soil.canSustainPlant(world, x, y - 1, z, ForgeDirection.UP, YummyItems.CornSeeds.));
     }
 
     @Override
     public int idDropped (int metadata, Random random, int par2) {
         switch (metadata) {
         case 0:
-            return com.rhn.YummyMod.Items.CornSeed.itemID;
+            return YummyItems.CornSeeds.itemID;
         case 1:
-            return com.rhn.YummyMod.Items.Corn.itemID;
+            return YummyItems.Corn.itemID;
         default:
             // Error case!
             return -1; // air
@@ -83,6 +83,6 @@ public class TallCornCrop extends Block {
     //when crop is 
     @Override
     public int idPicked (World world, int x, int y, int z) {
-        return com.rhn.YummyMod.Items.CornSeed.itemID;
+        return com.rhn.YummyItems.CornSeeds.itemID;
     }
 }
