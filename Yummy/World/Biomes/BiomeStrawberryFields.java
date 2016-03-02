@@ -34,12 +34,13 @@ public class BiomeStrawberryFields extends BiomeGenBase{
 	{
 		super.decorate(world, rand, chunkX, chunkZ);
 		WorldGenerator strawberryBushGen = new YummyWorldGeneratorStrawberryBushes(topBlock);
-		
-		for (int l = 0; l < 64; ++l)
+		final int MIN_PATCHES = 2; // change if needed
+		final int MAX_PATCHES = 10; // change if needed
+		for (int i = MIN_PATCHES + rand.nextInt(MAX_PATCHES - MIN_PATCHES); i > 0; i--) 
 		{
-			
-            strawberryBushGen.generate(world, rand, tempX, tempY, tempZ);
-
+	            int xRand = (chunkX * 16) + rand.nextInt(16) - rand.nextInt(16);
+	            int zRand = (chunkZ * 16) + rand.nextInt(16) - rand.nextInt(16);
+	            strawberryBushGen.generate(world, rand, xRand, 0, zRand);
 		}
 	}
 	
