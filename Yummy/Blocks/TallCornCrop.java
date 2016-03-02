@@ -36,7 +36,8 @@ public class TallCornCrop extends Block {
     /*  The texture differs, based on whether the plant is grown or not. 
      *  In the texture file, position 32 contains the ungrown corn while position 33 contains the grown position. 
      *  When your texture and metadata values correspond on a one-for-one value, it makes sense to order the textures by metadata value, 
-     */ so that you can override getBlockTextureFromSideAndMetadata() to return the metadata 0 position plus metadata
+     *  so that you can override getBlockTextureFromSideAndMetadata() to return the metadata 0 position plus metadata
+     */
     @Override
     public int getBlockTextureFromSideAndMetadata (int side, int metadata) {
         return 32 + metadata;
@@ -65,9 +66,9 @@ public class TallCornCrop extends Block {
 
     @Override
     public boolean canBlockStay (World world, int x, int y, int z) {
-        Block soil = blocksList[world.getBlockId(x, y - 1, z)];
-        return (world.getFullBlockLightValue(x, y, z) >= 8 || world .canBlockSeeTheSky(x, y, z)) && 
-               (soil != null && soil.canSustainPlant(world, x, y - 1, z, ForgeDirection.UP, YummyItems.CornSeeds.));
+        Block BelowBlock = blocksList[world.getBlockId(x, y - 1, z)]; //block beneath the plant
+        return (world.getFullBlockLightValue(x, y, z) >= 8 || world.canBlockSeeTheSky(x, y, z)) && 
+               (BelowBlock != null && BelowBlock.canSustainPlant(world, x, y - 1, z, ForgeDirection.UP, YummyItems.CornSeeds));
     }
 
     public ItemStack idDropped (int metadata, Random random, int par2) {
@@ -82,7 +83,7 @@ public class TallCornCrop extends Block {
         }
     }
 
-    //when crop is 
-   public ItemStack idPicked (World world, int x, int y, int z) {
+    //when crop is picked before it's grown
+    public ItemStack idPicked (World world, int x, int y, int z) {
         return new ItemStack(YummyItems.CornSeeds);
     }
