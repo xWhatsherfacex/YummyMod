@@ -53,7 +53,8 @@ public class TallCornCrop extends Block {
         if (random.nextInt(isFertile(world, x, y - 1, z) ? 12 : 25) != 0) {
             return;
         }
-        world.setBlockMetadataWithNotify(x, y, z, 1);
+        world.setBlockMetadataWithNotify(x, y, z, 1); 
+        //The method setBlockMetadataWithNotify(int, int, int, int, int) in the type World is not applicable for the arguments (int, int, int, int) error
     }
 
     @Override
@@ -61,12 +62,13 @@ public class TallCornCrop extends Block {
         if (!canBlockStay(world, x, y, z)) {
             dropBlockAsItem(world, x, y, z, world.getBlockMetadata(x, y, z), 0);
             world.setBlockWithNotify(x, y, z, 0);
+            //The method setBlockWithNotify(int, int, int, int) is undefined for the type World
         }
     }
 
     @Override
     public boolean canBlockStay (World world, int x, int y, int z) {
-        Block BelowBlock = blocksList[world.getBlockId(x, y - 1, z)]; //block beneath the plant
+        Block BelowBlock = world.getBlock(x, y - 1, z); //block beneath the plant
         return (world.getFullBlockLightValue(x, y, z) >= 8 || world.canBlockSeeTheSky(x, y, z)) && 
                (BelowBlock != null && BelowBlock.canSustainPlant(world, x, y - 1, z, ForgeDirection.UP, YummyItems.CornSeeds));
     }
