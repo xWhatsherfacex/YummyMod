@@ -51,7 +51,7 @@ public class YummyWorldGeneratorStrawberryBushes extends WorldGenerator{
 
     		if (world.isAirBlock(tempX, tempY, tempZ) && (!world.provider.hasNoSky || tempY < 255) && YummyBlocks.StrawberryBush.canBlockStay(world, tempX, tempY, tempZ))
     		{
-    			world.setBlock(tempX, tempY, tempZ, YummyBlocks.StrawberryBush, 0, 3);
+    		   	world.setBlock(tempX, tempY, tempZ, YummyBlocks.StrawberryBush, random.nextInt(5), 2);
     			System.out.print("Success!");
     		}
     	}
