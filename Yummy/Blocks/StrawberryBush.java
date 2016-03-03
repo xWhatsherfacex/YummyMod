@@ -7,10 +7,13 @@ import com.rnh.Yummy.YummyItems;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockCrops;
+import net.minecraft.block.BlockDirectional;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -53,6 +56,13 @@ public class StrawberryBush extends BlockCrops{
 	protected Item func_149865_P(){
 		return null;
 	}
+	
+	@Override
+	public boolean canBlockStay(World world, int x, int y, int z)
+	{
+	    Block below = world.getBlock(x, y-1, z);
+	    return below == Blocks.farmland || below == Blocks.grass;
+	}	
 	@Override
     public void onBlockClicked (World world, int x, int y, int z, EntityPlayer player)
     {
@@ -72,9 +82,6 @@ public class StrawberryBush extends BlockCrops{
 	  @Override
 	    public boolean onBlockActivated (World world, int x, int y, int z, EntityPlayer player, int par6, float par7, float par8, float par9)
 	    {
-	        /*if (world.isRemote)
-	        	return false;*/
-
 	        int meta = world.getBlockMetadata(x, y, z);
 	        if (meta >= 7)
 	        {
